@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_06_201138) do
+ActiveRecord::Schema.define(version: 2018_07_07_164421) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,10 @@ ActiveRecord::Schema.define(version: 2018_07_06_201138) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "ancestry"
+    t.index ["ancestry"], name: "index_cpvs_on_ancestry"
+    t.index ["code"], name: "index_cpvs_on_code"
+    t.index ["description"], name: "index_cpvs_on_description"
   end
 
 end

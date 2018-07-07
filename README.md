@@ -1,24 +1,57 @@
-# README
+# CPVs Coding Test
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+# System Requirements
+* Ruby version - 2.5.1
+* Database creation - run: `rails db:setup`
 
-* Ruby version
+# How to run the scraper
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Items that do not have direct parents
+The following codes are for items that do not have a direct parent and are cosnidered orphaned.
+30192121-5
+30192122-2
+30192123-9
+30192124-6
+30192125-3
+30192126-0
+30192127-7
+34511100-3
+35611100-1
+35611200-2
+35611300-3
+35611400-4
+35611500-5
+35611600-6
+35611700-7
+35611800-8
+35612100-8
+35612200-9
+35612300-0
+35612400-1
+35612500-2
+35811100-3
+35811200-4
+35811300-5
+38527100-6
+38527200-7
+38527300-8
+38527400-9
+39254000-7
+39254100-8
+39254110-1
+39254120-4
+39254130-7
+42924200-1
+42924300-2
+42924310-5
+42924700-6
+42924710-9
+42924720-2
+42924730-5
+42924740-8
+42924790-3
+44115310-5
+44613110-4
+60112000-6

@@ -7,5 +7,8 @@ class CreateCpvs < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
+
+    add_index :cpvs, :code
+    add_index :cpvs, :description
   end
 end

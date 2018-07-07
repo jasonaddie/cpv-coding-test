@@ -1,4 +1,6 @@
 class Cpv < ApplicationRecord
+  has_ancestry
+
   ##################
   ## VALIDATIONS
   ##################
