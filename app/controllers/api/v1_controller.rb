@@ -30,5 +30,19 @@ class Api::V1Controller < ApplicationController
     end
   end
 
+  # GET /api/v1/search
+  # params: q
+  def search
+    results = Cpv.search(params[:q])
+
+    if results.present?
+      render json: {
+        'cpvs': ActiveModel::Serializer::CollectionSerializer.new(results, each_serializer: CpvSerializer)
+      }, :callback => params[:callback]
+    else
+      render json: [], each_serializer: CpvSerializer, :root => 'cpvs', :callback => params[:callback]
+    end
+  end
+
 
 end

@@ -18,4 +18,12 @@ class Cpv < ApplicationRecord
   def self.parent_codes
     where('ancestry is null').sorted
   end
+
+  def self.search(q=nil)
+    if q.nil?
+      Cpv.none
+    else
+      where(["code ilike ? or description ilike ?", "#{q}%", "%#{q}%"])
+    end
+  end
 end

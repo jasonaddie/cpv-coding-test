@@ -5,5 +5,4 @@ class CpvSerializer < ActiveModel::Serializer
     object.has_children?
   end
 
-
 end
