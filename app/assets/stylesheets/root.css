@@ -1,3 +1,30 @@
+.cpv_container{
+  width:100%;
+  padding:10px;
+}
+
+.cpv_container .cpv_main_categories{
+  width: 49%;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.cpv_container .cpv_children{
+  width: 40%;
+  vertical-align: top;
+  display: inline-block;
+  padding: 20px;
+}
+
+.cpv_container .cpv_children.active{
+  background-color: #ddd;
+}
+
+a.cpv-parent,
+a.cpv-parent:visited{
+  color: #000099;
+}
+
 .cpv-parents{
   list-style-type: none;
   padding-left: 0;
@@ -9,6 +36,16 @@
   background-color: #fff;
 }
 
-.cpv-parents li:nth-child(even){
-  background-color: #ddd;
+.cpv-parents li:nth-child(odd){
+  background-color: #eee;
+}
+
+.cpv_container .cpv_children .cpv-breadcrumb{
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+}
+.cpv_container .cpv_children .cpv-breadcrumb a,
+.cpv_container .cpv_children .cpv-breadcrumb a:visited{
+  color: #fff;
 }

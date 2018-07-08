@@ -71,3 +71,4 @@ gem 'dotenv-rails', '~> 2.1', '>= 2.1.1' # env variables
 gem 'typhoeus', '~> 1.3' # to scrape the data
 gem 'nokogiri', '~> 1.8', '>= 1.8.4' # to process the scraped data
 gem 'ancestry', '~> 3.0', '>= 3.0.2' # structure relations for records in a table
+gem 'active_model_serializers', '~> 0.10.7' # serialize api calls

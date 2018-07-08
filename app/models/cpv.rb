@@ -11,7 +11,11 @@ class Cpv < ApplicationRecord
   ##################
   ## SCOPES
   ##################
+  def self.sorted
+    order(description: :asc)
+  end
+
   def self.parent_codes
-    where('ancestry is null').order(description: :asc)
+    where('ancestry is null').sorted
   end
 end

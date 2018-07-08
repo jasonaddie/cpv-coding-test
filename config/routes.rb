@@ -2,7 +2,8 @@ Rails.application.routes.draw do
 
     namespace :api do
       #v1
-      match '/v1' => 'v1#index', via: [:get], defaults: { format: 'json' }
+      match '/v1/cpv' => 'v1#cpv', via: [:get], defaults: { format: 'json' }
+      match '/v1/children' => 'v1#children', via: [:get], defaults: { format: 'json' }
 
     end
 

@@ -2,20 +2,33 @@
 
   <p>
     This site provides the ability to view the European Union Common Procurement Vocabulary (CPV) codes and descriptions.
-    The CPV codes are heirarchical, so you can click on a category to view all of its items.
     This data comes from the <a href="http://cpv.data.ac.uk/scheme-CPV2008.html" target="_blank">CPV website</a>.
   </p>
 
-  <h1>CPV Categories</h1>
+  <div class="cpv_container">
 
-  <ul class="cpv-parents">
-    <% @parent_codes.each do |code| %>
-      <li>
-        <a href="#" data-code="<%= code.code %>" title="Click to view items in this category"><%= code.description %></a>
-      </li>
-    <% end %>
-  </ul>
+    <div class="cpv_main_categories">
+      <h1>CPV Categories</h1>
 
+      <p>Click on a category to view all of its items.</p>
+
+      <ul class="cpv-parents">
+        <% @parent_codes.each do |code| %>
+          <li>
+            <% if code.has_children? %>
+              <a href="#" class="cpv-parent" data-code="<%= code.code %>" title="Click to view items in this category"><%= code.description %></a>
+            <% else %>
+              <%= code.description %>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="cpv_children">
+    </div>
+
+  </div>
 <% else %>
 
   <div class="no-data">
