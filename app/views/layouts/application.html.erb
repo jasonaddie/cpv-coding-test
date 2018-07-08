@@ -1,15 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>CpvsCodingTest</title>
+    <title>CPV Coding Test</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
+    <header>
+      <div class="logo">CPV Coding Test</div>
+      <div class="placeholder"></div>
+      <div class="links">
+        <%= link_to "Download Data", download_path %>
+      </div>
+    </header>
+
     <%= yield %>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <%= javascript_include_tag 'application' %>
   </body>
 </html>

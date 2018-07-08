@@ -1,0 +1,14 @@
+.cpv-parents{
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.cpv-parents li{
+  margin: 5px 0;
+  padding: 5px;
+  background-color: #fff;
+}
+
+.cpv-parents li:nth-child(even){
+  background-color: #ddd;
+}
